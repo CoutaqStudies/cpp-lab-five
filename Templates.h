@@ -31,7 +31,7 @@ public:
     }
     void push(T elem){
         if(nums == maxElements) {
-            std::ofstream data("dump.dat");
+            std::ofstream data(dumpFile);
             data<<(*this);
             data.close();
             nums = 0;
@@ -73,7 +73,7 @@ public:
         T output = values[0];
         if(nums ==1){
             for(int i = 0; i<maxElements; i++){
-                std::ifstream data("dump.dat");
+                std::ifstream data(dumpFile);
                 std::string temp;
                 while (std::getline(data, temp) &&nums<maxElements){
                     std::istringstream ss(temp);
@@ -92,6 +92,7 @@ public:
     }
 private:
     static const int maxElements = 64;
+    const std::string dumpFile = "dump.dat";
     T values[maxElements];
     int nums = 0;
 };
@@ -152,7 +153,7 @@ public:
         char output = values[0];
         if(nums ==1){
             for(int i = 0; i<maxElements; i++){
-                std::ifstream data("dump.dat");
+                std::ifstream data(dumpFile);
                 std::string temp;
                 while (std::getline(data, temp) &&nums<maxElements){
                     std::istringstream ss(temp);
@@ -174,7 +175,7 @@ public:
         char output = toupper(values[0]);
         if(nums ==1){
             for(int i = 0; i<maxElements; i++){
-                std::ifstream data("dump.dat");
+                std::ifstream data(dumpFile);
                 std::string temp;
                 while (std::getline(data, temp) &&nums<maxElements){
                     std::istringstream ss(temp);
@@ -196,7 +197,7 @@ public:
         char output = tolower(values[0]);
         if(nums ==1){
             for(int i = 0; i<maxElements; i++){
-                std::ifstream data("dump.dat");
+                std::ifstream data(dumpFile);
                 std::string temp;
                 while (std::getline(data, temp) &&nums<maxElements){
                     std::istringstream ss(temp);
@@ -217,6 +218,7 @@ private:
     static const int maxElements = 64;
     char values[maxElements];
     int nums = 0;
+    const std::string dumpFile = "dump.dat";
 };
 // task five
 

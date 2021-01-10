@@ -1,8 +1,13 @@
 # Created by .ignore support plugin (hsz.mobi)
-/cmake-build-debug/
 /.idea/.name
 /.idea/cpp-lab-five.iml
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/.gitignore
+/cmake-build-debug/CMakeFiles/
+/cmake-build-debug/cpp_lab_five.cbp
+/cmake-build-debug/cpp_lab_five
+/cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/cmake_install.cmake
+/cmake-build-debug/Makefile
